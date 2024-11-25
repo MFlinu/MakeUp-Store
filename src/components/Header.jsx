@@ -6,107 +6,21 @@ import { Button } from "./ui/button";
 import {Sheet,SheetClose,SheetContent,SheetDescription,SheetHeader,SheetTitle,SheetTrigger,SheetFooter} from "@/components/ui/sheet"
 
 export default function Header(){
-    const user=true;
+    const user=false;
     const userName="Fanoos";
     const side="left";
     const count=0;
     return(
         <header>
 
-            {/* Larg Screens and PC Navbar Start*/}
-            <nav className="hidden md:flex items-center justify-between w-full py-4 px-5 md:px-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300">
-                <Link href={"/"} className="text-2xl">
-                    شعار متجر فانوس
-                </Link>
-                <div>
-                    {!user ? (
-                        /* Larg Screen and PC not Logged in Design Start */
-                        <div className="flex gap-x-3">
-                            <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
-                            <Sheet key={side}>
-                                <SheetTrigger><Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button></SheetTrigger>
-                                <SheetContent side={side}>
-                                    <SheetHeader>
-                                        <SheetClose asChild></SheetClose>
-                                        <SheetTitle>
-                                            <di className="flex gap-x-5 items-center my-2">
-                                              <Heart  fill="red" strokeWidth={0}/>
-                                              <p>{count} عنصر</p>
-                                            </di>
-                                        </SheetTitle>
-                                        <SheetDescription>
-                                        اضغط على أيقونة القلب على أي منتج وستتم إضافته إلى مفضلاتك
-                                        </SheetDescription>
-                                    </SheetHeader>
-                                </SheetContent>
-                            </Sheet>
-                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Languages/></Button>
-                            <HoverCard openDelay={0} closeDelay={0}>
-                                <HoverCardTrigger className="flex items-center cursor-pointer gap-x-1">
-                                    <User size={20}/>
-                                        <p className="text-lg">تسجيل الدخول</p>
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <p className="text-center text-2xl">مرحبا بك في متجر فانوس</p>
-                                    <Button asChild className="rounded-full w-full mt-3" size={"sm"}>
-                                        <Link href={"/login"} className="text-xl">تسجيل الدخول</Link>
-                                    </Button>
-
-                                    <p className="text-center mt-2">-- او يمكن --</p>
-                                    <Button asChild className="rounded-full w-full mt-3" size={"sm"}>
-                                        <Link href={"/signup"} className="text-xl">إنشاء حساب</Link>
-                                    </Button>
-                                </HoverCardContent>
-                            </HoverCard>
-                        </div>
-                        /* Larg Screen and PC not Logged in Design End */
-                        ) :
-                        (
-                        /* Larg Screen and PC Logged in Design Start */
-                        <div className="flex gap-x-3">
-                            <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
-                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button>
-                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Languages/></Button>
-                            <HoverCard openDelay={0} closeDelay={0}>
-                                <HoverCardTrigger className="flex items-center cursor-pointer gap-x-1">
-                                    <User size={20}/>
-                                        <p className="text-lg">الحساب</p>
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <p className="text-lg">مرحبا {userName}</p>
-                                    <hr className="my-3"/>
-
-                                    <div className="w-full flex flex-col my-2 gap-y-3">
-                                        <Link href={"/"} className="flex gap-2 text-xl"><Settings size={20}/>أعدادات الحساب</Link>
-                                        <Link href={"/"} className="flex gap-2 text-xl"><ListOrdered size={20}/>سجل الطلبات</Link>
-                                    </div>
-
-                                    <div className="w-full flex flex-col my-2 gap-y-3">
-                                        <Link href={"/"} className="flex gap-2 text-xl"><MessageSquareText size={20}/>الرسائل</Link>
-                                    </div>
-
-                                    <div className="w-full flex flex-col my-2 gap-y-3">
-                                        <Link href={"/"} className="flex gap-2 text-xl"><LogOut size={20}/>تسجيل خروج</Link>
-                                    </div>
-                                </HoverCardContent>
-                            </HoverCard>
-                            
-                        </div>
-                        ) 
-                        /* Larg Screen and PC Logged in Design End */
-                        }
-                </div>
-            </nav>
-            {/* Larg Screens and PC Navbar End*/}
-
             {/* Moblie Navbar Start*/}
             <nav className="md:hidden">
                 <div>
                     {!user ? (
                         /* Mobile not Logged in Design Start */
-                        <div className="flex flex-row-reverse items-center justify-between w-full py-4 px-5 md:px-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300">
+                        <div className="flex flex-row-reverse items-center justify-between w-full py-4 px-5 md:px-8  bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 ">
 
-                            <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
+                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
                             <Link href={"/"}>
                                 FanoosStore
                             </Link>
@@ -124,7 +38,7 @@ export default function Header(){
                                             </div>
                                         </SheetTitle>
                                         <SheetDescription>
-                                            <p className="text-2xl flex justify-start"> مرحبا بكم في متجر فانوس</p>
+                                            <p className="text-2xl flex justify-start "> مرحبا بكم في متجر فانوس</p>
                                         </SheetDescription>
                                     </SheetHeader>
                                     <div className="flex justify-end gap-2 mt-2">
@@ -279,6 +193,95 @@ export default function Header(){
                 </div>
             </nav>
             {/* Moblie Navbar End*/}
+
+
+            {/* Larg Screens and PC Navbar Start*/}
+            <nav className="hidden md:flex items-center justify-between w-full py-4 px-5 md:px-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300">
+                <Link href={"/"} className="text-2xl">
+                    شعار متجر فانوس
+                </Link>
+                <div>
+                    {!user ? (
+                        /* Larg Screen and PC not Logged in Design Start */
+                        <div className="flex gap-x-3">
+                            <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
+                            <Sheet key={side}>
+                                <SheetTrigger><Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button></SheetTrigger>
+                                <SheetContent side={side}>
+                                    <SheetHeader>
+                                        <SheetClose asChild></SheetClose>
+                                        <SheetTitle>
+                                            <di className="flex gap-x-5 items-center my-2">
+                                              <Heart  fill="red" strokeWidth={0}/>
+                                              <p>{count} عنصر</p>
+                                            </di>
+                                        </SheetTitle>
+                                        <SheetDescription>
+                                        اضغط على أيقونة القلب على أي منتج وستتم إضافته إلى مفضلاتك
+                                        </SheetDescription>
+                                    </SheetHeader>
+                                </SheetContent>
+                            </Sheet>
+                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Languages/></Button>
+                            <HoverCard openDelay={0} closeDelay={0}>
+                                <HoverCardTrigger className="flex items-center cursor-pointer gap-x-1">
+                                    <User size={20}/>
+                                        <p className="text-lg">تسجيل الدخول</p>
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <p className="text-center text-2xl">مرحبا بك في متجر فانوس</p>
+                                    <Button asChild className="rounded-full w-full mt-3" size={"sm"}>
+                                        <Link href={"/login"} className="text-xl">تسجيل الدخول</Link>
+                                    </Button>
+
+                                    <p className="text-center mt-2">-- او يمكن --</p>
+                                    <Button asChild className="rounded-full w-full mt-3" size={"sm"}>
+                                        <Link href={"/signup"} className="text-xl">إنشاء حساب</Link>
+                                    </Button>
+                                </HoverCardContent>
+                            </HoverCard>
+                        </div>
+                        /* Larg Screen and PC not Logged in Design End */
+                        ) :
+                        (
+                        /* Larg Screen and PC Logged in Design Start */
+                        <div className="flex gap-x-3">
+                            <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
+                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button>
+                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Languages/></Button>
+                            <HoverCard openDelay={0} closeDelay={0}>
+                                <HoverCardTrigger className="flex items-center cursor-pointer gap-x-1">
+                                    <User size={20}/>
+                                        <p className="text-lg">الحساب</p>
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <p className="text-lg">مرحبا {userName}</p>
+                                    <hr className="my-3"/>
+
+                                    <div className="w-full flex flex-col my-2 gap-y-3">
+                                        <Link href={"/"} className="flex gap-2 text-xl"><Settings size={20}/>أعدادات الحساب</Link>
+                                        <Link href={"/"} className="flex gap-2 text-xl"><ListOrdered size={20}/>سجل الطلبات</Link>
+                                    </div>
+
+                                    <div className="w-full flex flex-col my-2 gap-y-3">
+                                        <Link href={"/"} className="flex gap-2 text-xl"><MessageSquareText size={20}/>الرسائل</Link>
+                                    </div>
+
+                                    <div className="w-full flex flex-col my-2 gap-y-3">
+                                        <Link href={"/"} className="flex gap-2 text-xl"><LogOut size={20}/>تسجيل خروج</Link>
+                                    </div>
+                                </HoverCardContent>
+                            </HoverCard>
+                            
+                        </div>
+                        ) 
+                        /* Larg Screen and PC Logged in Design End */
+                        }
+                </div>
+            </nav>
+            {/* Larg Screens and PC Navbar End*/}
+
+
         </header>
     );
 }

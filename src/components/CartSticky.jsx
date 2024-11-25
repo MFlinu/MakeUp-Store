@@ -1,4 +1,5 @@
 import { ShoppingBasket } from "lucide-react";
+import Link from "next/link";
 
 
 export default function CartSticky(){
@@ -6,7 +7,8 @@ export default function CartSticky(){
     const count=0;
     const price=23;
     return(
-        <div>
+        <Link href={'/cart'}>
+                    <div>
             {/* Mobile Cart Display Start */}
             {/* Mobile Cart Display<640 Start */}
             <div className="sm:hidden flex flex-row-reverse justify-between items-center fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-3 rounded-full mx-5 mb-4">
@@ -47,5 +49,6 @@ export default function CartSticky(){
             {/* Larg Screen and PC Cart Display End */}
 
         </div>
+        </Link>
     )
 }
