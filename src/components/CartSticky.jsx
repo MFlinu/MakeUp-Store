@@ -1,4 +1,4 @@
-import { ShoppingBag, ShoppingBasket } from "lucide-react";
+import { ShoppingBasket } from "lucide-react";
 
 
 export default function CartSticky(){

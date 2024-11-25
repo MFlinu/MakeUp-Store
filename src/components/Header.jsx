@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import {Sheet,SheetClose,SheetContent,SheetDescription,SheetHeader,SheetTitle,SheetTrigger,SheetFooter} from "@/components/ui/sheet"
 
 export default function Header(){
-    const user=false;
+    const user=true;
     const userName="Fanoos";
     const side="left";
     const count=0;
@@ -18,13 +18,12 @@ export default function Header(){
                 <Link href={"/"} className="text-2xl">
                     شعار متجر فانوس
                 </Link>
-            
                 <div>
                     {!user ? (
                         /* Larg Screen and PC not Logged in Design Start */
                         <div className="flex gap-x-3">
                             <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
-                            <Sheet ket={side}>
+                            <Sheet key={side}>
                                 <SheetTrigger><Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button></SheetTrigger>
                                 <SheetContent side={side}>
                                     <SheetHeader>
