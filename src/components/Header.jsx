@@ -8,6 +8,8 @@ import {Sheet,SheetClose,SheetContent,SheetDescription,SheetHeader,SheetTitle,Sh
 export default function Header(){
     const user=false;
     const userName="Fanoos";
+    const side="left";
+    const count=0;
     return(
         <header>
 
@@ -22,7 +24,23 @@ export default function Header(){
                         /* Larg Screen and PC not Logged in Design Start */
                         <div className="flex gap-x-3">
                             <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
-                            <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button>
+                            <Sheet ket={side}>
+                                <SheetTrigger><Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button></SheetTrigger>
+                                <SheetContent side={side}>
+                                    <SheetHeader>
+                                        <SheetClose asChild></SheetClose>
+                                        <SheetTitle>
+                                            <di className="flex gap-x-5 items-center my-2">
+                                              <Heart  fill="red" strokeWidth={0}/>
+                                              <p>{count} عنصر</p>
+                                            </di>
+                                        </SheetTitle>
+                                        <SheetDescription>
+                                        اضغط على أيقونة القلب على أي منتج وستتم إضافته إلى مفضلاتك
+                                        </SheetDescription>
+                                    </SheetHeader>
+                                </SheetContent>
+                            </Sheet>
                             <Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Languages/></Button>
                             <HoverCard openDelay={0} closeDelay={0}>
                                 <HoverCardTrigger className="flex items-center cursor-pointer gap-x-1">
