@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import {HoverCard,HoverCardContent,HoverCardTrigger,} from "@/components/ui/hover-card"
-import { Facebook, FileLock, FileQuestion, FileText, Heart, History, Home, Instagram, Languages, LayoutList, ListOrdered, LogOut, Mail, Menu, MessageSquareText, Search, Settings, ShoppingCart, User, Youtube} from "lucide-react";
+import { Facebook, FileLock, FileQuestion, FileText, Heart, History, Home, Instagram, Languages, LayoutList, ListOrdered, LogOut, Mail, Menu, MessageSquareText, Search, Settings, User, Youtube} from "lucide-react";
 import { Button } from "./ui/button";
 import {Sheet,SheetClose,SheetContent,SheetDescription,SheetHeader,SheetTitle,SheetTrigger,SheetFooter} from "@/components/ui/sheet"
 
@@ -25,7 +25,7 @@ export default function Header(){
                                 FanoosStore
                             </Link>
                             <Sheet>
-                                <SheetTrigger><Menu/></SheetTrigger>
+                                <SheetTrigger asChild><Menu/></SheetTrigger>
                                 <SheetContent>
                                     <SheetHeader>
                                         <SheetClose asChild></SheetClose>
@@ -42,8 +42,8 @@ export default function Header(){
                                         </SheetDescription>
                                     </SheetHeader>
                                     <div className="flex justify-end gap-2 mt-2">
-                                        <Button  className="w-full"><Link href={"/signin"} className="text-xl">تسجيل الدخول</Link></Button>
-                                        <Button  className="w-full"><Link href={"signup"} className="text-xl">إنشاء حساب</Link></Button>
+                                        <Button asChild  className="w-full"><Link href={"/signin"} className="text-xl">تسجيل الدخول</Link></Button>
+                                        <Button  asChild className="w-full"><Link href={"signup"} className="text-xl">إنشاء حساب</Link></Button>
                                     </div>
 
                                     <div className="flex-col my-5 font-sans">
@@ -110,7 +110,7 @@ export default function Header(){
                                 FanoosStore
                             </Link>
                             <Sheet>
-                                <SheetTrigger><Menu/></SheetTrigger>
+                                <SheetTrigger asChild><Menu/></SheetTrigger>
                                 <SheetContent>
                                     <SheetHeader>
                                         <SheetClose asChild></SheetClose>
@@ -179,7 +179,7 @@ export default function Header(){
                                                         <Link href={"#"}><Instagram/></Link>
                                                         <Link href={"#"}><Youtube/></Link>
                                                     </div>
-                                                    <Button className="mb-2"><Link href={"signup"} className="text-xl">تسجيل خروج</Link></Button>
+                                                    <Button asChild className="mb-2"><Link href={"signup"} className="text-xl">تسجيل خروج</Link></Button>
                                                 </div>
                                             </div>
                                     </SheetFooter>
@@ -206,7 +206,7 @@ export default function Header(){
                         <div className="flex gap-x-3">
                             <Button className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Search/></Button>
                             <Sheet key={side}>
-                                <SheetTrigger><Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button></SheetTrigger>
+                                <SheetTrigger asChild><Button className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"><Heart/></Button></SheetTrigger>
                                 <SheetContent side={side}>
                                     <SheetHeader>
                                         <SheetClose asChild></SheetClose>
