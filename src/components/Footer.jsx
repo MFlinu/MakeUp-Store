@@ -39,10 +39,22 @@ export default function Footer()
                     <div className="my-3">
                         <h3 className=" font-sans text-2xl">تابعنا على</h3>
                     </div>
-                    <div className="flex gap-x-2 justify-start my-3 px-3">
-                        <Link href={"#"}><Facebook className="size-8"/></Link>
-                        <Link href={"#"}><Instagram className="size-8"/></Link>
-                        <Link href={"#"}><Youtube className="size-8"/></Link>
+                    <div className="flex p-2 gap-x-2">
+                        <div className=" border-gray-200 border-2 rounded-full ">
+                            <Link href={"#"}>
+                                <Facebook className="size-6 m-1"/>
+                            </Link>
+                        </div>
+                        <div className=" border-gray-200 border-2 rounded-full ">
+                            <Link href={"#"}>
+                                <Instagram className="size-6 m-1"/>
+                            </Link>
+                        </div>
+                        <div className=" border-gray-200 border-2 rounded-full ">
+                            <Link href={"#"}>
+                                <Youtube className="size-6 m-1"/>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -77,19 +89,31 @@ export default function Footer()
                                 <Button name="submit" className="mt-1 w-3/12 text-xl">اشترك</Button>
                             </div>
                         </form>
-                            
+
+
                         <div className="flex flex-col mt-3 p-2">
                             <div className="p-2">
                                 <h3 className=" font-sans text-xl">تابعنا على</h3>
                             </div>
                             <div className="flex p-2 gap-x-2">
-                                <Link href={"#"} className=" border-gray-200 border-2 rounded-full "><Facebook className="size-8"/></Link>
-                                <Link href={"#"} className=" border-gray-200 border-2 rounded-full "><Instagram className="size-8"/></Link>
-                                <Link href={"#"} className=" border-gray-200 border-2 rounded-full "><Youtube className="size-8"/></Link>
+                                <div className=" border-gray-200 border-2 rounded-full ">
+                                    <Link href={"#"}>
+                                        <Facebook className="size-6 m-1"/>
+                                    </Link>
+                                </div>
+                                <div className=" border-gray-200 border-2 rounded-full ">
+                                    <Link href={"#"}>
+                                        <Instagram className="size-6 m-1"/>
+                                    </Link>
+                                </div>
+                                <div className=" border-gray-200 border-2 rounded-full ">
+                                    <Link href={"#"}>
+                                        <Youtube className="size-6 m-1"/>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
-
             </footer>
              {/* PC and Larg Screen Footer End */}
         </>

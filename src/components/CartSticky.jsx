@@ -2,10 +2,10 @@ import { ShoppingBasket } from "lucide-react";
 import Link from "next/link";
 
 
-export default function CartSticky(){
+export default function CartSticky(props){
 
-    const count=0;
-    const price=23;
+    const count=props.count;
+    const price=props.price;
     return(
         <Link href={'/cart'}>
                     <div>
